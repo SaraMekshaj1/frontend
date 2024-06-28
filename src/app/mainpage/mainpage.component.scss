@@ -1,0 +1,53 @@
+body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    width: 250px;
+    position: fixed;
+    height: 100%;
+    background-color: #343a40; /* Same as bg-dark */
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .navbar {
+    flex-direction: column;
+    align-items: start;
+}
+
+.sidebar .navbar-brand {
+    padding-left: 1rem;
+}
+
+.sidebar .btn {
+    margin: 1rem;
+}
+
+.content {
+    margin-left: 250px; /* Same as sidebar width */
+    padding: 1rem;
+    width: calc(100% - 250px);
+    box-sizing: border-box;
+}
+
+.welcome-page {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f8f9fa; /* Light background color */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-page h1 {
+    color: #343a40; /* Dark color for the heading */
+    margin-bottom: 1rem;
+}
+
+.welcome-page p {
+    color: #6c757d; /* Muted color for the paragraph */
+    font-size: 1.2rem;
+}

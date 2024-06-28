@@ -1,0 +1,25 @@
+<div class="container mt-5">
+    <h2>Create New User</h2>
+    <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" required [(ngModel)]="user.name" name="name" #name="ngModel">
+            <div [hidden]="name.valid || name.pristine" class="text-danger">Name is required</div>
+        </div>
+        <div class="mb-3">
+            <label for="skills" class="form-label">Skills</label>
+            <input type="text" class="form-control" id="skills" required [(ngModel)]="user.skills" name="skills" #skills="ngModel">
+            <div [hidden]="skills.valid || skills.pristine" class="text-danger">Skills are required</div>
+        </div>
+        <div class="mb-3">
+            <label for="experience" class="form-label">Experience</label>
+            <input type="number" class="form-control" id="experience" required [(ngModel)]="user.experience" name="experience" #experience="ngModel">
+            <div [hidden]="experience.valid || experience.pristine" class="text-danger">Experience is required</div>
+        </div>
+        <div class="mb-3">
+            <label for="profilePhoto" class="form-label">Profile Photo</label>
+            <input type="file" class="form-control" id="profilePhoto" (change)="onFileChange($event)" required>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="!userForm.form.valid">Create User</button>
+    </form>
+</div>
